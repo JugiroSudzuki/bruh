@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bruh</title>
+</head>
+<style type="text/css">
+	.fon{
+		width: 1900px;
+		height: 950px;
+		background-image: url(fon.jpg);
+		background-size: 100% 100%;
+	}
+	.text1{
+		text-align: center;
+		color: white;
+		font-family: arial;
+	}
+	.btn{
+		width: 100px;
+		height: 40px;
+		margin-left: 900px;
+		margin-top: 10px;
+	}
+	.gus{
+		width: 300px;
+		height: 200px;
+		background-image: url(gus.png);
+		background-size: 100% 100%;
+		position: absolute;
+		left: 1200px;
+		top: 200px;
+		transition: 3s;
+	}
+	.duck{
+		width: 300px;
+		height: 200px;
+		background-image: url(duck.jpg);
+		background-size: 100% 100%;
+		position: absolute;
+		left: 1200px;
+		top: 500px;
+		transition: 3s;
+	}
+	.chick{
+		width: 300px;
+		height: 200px;
+		background-image: url(kur.jpg);
+		background-size: 100% 100%;
+		position: absolute;
+		left: 400px;
+		top: 500px;
+		transition: 3s;
+	}
+	.pig{
+		width: 300px;
+		height: 200px;
+		background-image: url(pig.jpg);
+		background-size: 100% 100%;
+		position: absolute;
+		top: 200px;
+		left: 400px;
+		transition: 3s;
+	}
+	.d-flex{
+		display: flex;
+	}
+	.win{
+		background-image: url(win.jpg);
+		width: 300px;
+		height: 300px;
+		display: none;
+		margin-left: auto;
+		margin-top: auto;
+		margin-right: auto;
+		margin-bottom: auto;
+		background-size: 100% 100%;
+	}
+</style>
+<body style="margin: 0px;">
+	<div class="fon">
+		<h1 class="text1">У тебя <span class="text"></span> попытки</h1>
+		<p class="text1">Найди мини-пига с клубникой</p>
+		<button class="btn">Перемешать</button>
+		<div class="d-flex">
+			<div class="gus"></div>
+			<div class="pig"></div>
+		</div>
+		<div class="d-flex">
+			<div class="chick"></div>
+			<div class="duck"></div>
+		</div>
+		
+	</div>
+	<div class="win"></div>
+
+	<script type="text/javascript">
+		let sum = 3;
+		document.querySelector('.text').innerHTML = sum;
+		document.querySelector('.btn').onclick = function(){
+				document.querySelector('.pig').style.left = '1200px'
+				document.querySelector('.pig').style.top = '500px'
+				document.querySelector('.chick').style.left = '1200px'
+				document.querySelector('.chick').style.top = '200px'
+				document.querySelector('.gus').style.left = '400px'
+				document.querySelector('.gus').style.top = '500px'
+				document.querySelector('.duck').style.left = '400px'
+				document.querySelector('.duck').style.top = '200px'
+		document.querySelector('.pig').style.backgroundImage = 'none';
+		document.querySelector('.pig').style.backgroundColor = 'black'		
+		document.querySelector('.chick').style.backgroundImage = 'none';
+		document.querySelector('.chick').style.backgroundColor = 'black';
+		document.querySelector('.gus').style.backgroundImage = 'none';
+		document.querySelector('.gus').style.backgroundColor = 'black';
+		document.querySelector('.duck').style.backgroundImage = 'none';
+		document.querySelector('.duck').style.backgroundColor = 'black';
+		}
+		document.querySelector('.pig').onclick = function(){
+			document.querySelector('.fon').style.display = 'none'
+			document.querySelector('.win').style.display = 'block'
+		}
+		document.querySelector('.duck').onclick = function(){
+			sum = sum -1;
+			document.querySelector('.text').innerHTML = sum;
+			alert("nice try...")
+		if (sum == 0){
+			alert("ty luzerrr ahah... sorry")
+		}
+		}
+		document.querySelector('.gus').onclick = function(){
+			sum = sum -1;
+			document.querySelector('.text').innerHTML = sum;
+			alert("nice try...")
+		if (sum == 0){
+			alert("ty luzerrr ahah... sorry")
+		}
+		}
+		document.querySelector('.chick').onclick = function(){
+			sum = sum -1;
+			document.querySelector('.text').innerHTML = sum;
+			alert("nice try...")
+		if (sum == 0){
+			alert("ty luzerrr ahah... sorry")
+		}
+		}
+	</script>
+</body>
+</html>
